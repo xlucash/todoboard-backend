@@ -36,7 +36,7 @@ public class TaskController {
         return new ResponseEntity<Task>(task, HttpStatus.OK);
     }
 
-    @PutMapping("/tasks")
+    @PostMapping("/tasks")
     public ResponseEntity<Task> createTask(@RequestBody Task task) {
         try {
             Task returnTask = taskService.createTask(task);
